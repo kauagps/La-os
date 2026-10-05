@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://bronpp7ytdd7e"]
+
+[ext_resource type="Script" uid="uid://b6k3jtr5kuc5t" path="res://scripts/player.gd" id="1_0wfyh"]
+[ext_resource type="Script" uid="uid://dtpa0n0m33c4n" path="res://scripts/main.gd" id="1_sugp2"]
+[ext_resource type="SpriteFrames" uid="uid://cdvtgf4yi2kev" path="res://assets/idle_frames.tres" id="2_tbgi4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kclww"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_44qij"]
+
+[node name="Main" type="Node2D" unique_id=340075188]
+script = ExtResource("1_sugp2")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=34150762]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1347191735]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.36977255, 0.27468312, 0.022208491, 1)
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1944791677]
+position = Vector2(100, 100)
+script = ExtResource("1_0wfyh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=622038491]
+shape = SubResource("RectangleShape2D_kclww")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1321790280]
+sprite_frames = ExtResource("2_tbgi4")
+animation = &"walk front"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1080683315]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D" unique_id=586552501]
+sprite_frames = ExtResource("2_tbgi4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1053614991]
+shape = SubResource("RectangleShape2D_44qij")
+
+[node name="DialogueBox" type="Control" parent="." unique_id=941360736]
+script = ExtResource("1_dialogue")
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0
+offset_right = 0
+offset_bottom = -160
+
+[node name="Panel" type="ColorRect" parent="DialogueBox" unique_id=1121664220]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Portrait" type="TextureRect" parent="DialogueBox/Panel" unique_id=572372358]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextLabel" type="Label" parent="DialogueBox/Panel" unique_id=1136983745]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="ContinueHint" type="Label" parent="DialogueBox/Panel" unique_id=1829524750]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0

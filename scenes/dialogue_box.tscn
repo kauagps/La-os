@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=4 uid="uid_dialogue_box"]
+
+[node name="DialogueBox" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 0
+margin_bottom = 0
+
+[node name="Panel" type="Panel" parent="."]
+name = "Background"
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 160
+margin_right = 0
+margin_bottom = 0
+margin_left = 0
+custom_minimum_size = Vector2(600, 100)
+
+[node name="Portrait" type="TextureRect" parent="DialogueBox/Background"]
+name = "Portrait"
+margin_left = 10
+margin_top = 10
+margin_right = 90
+margin_bottom = 90
+expand = false
+stretch_mode = 2
+
+[node name="TextLabel" type="Label" parent="DialogueBox/Background"]
+name = "TextLabel"
+margin_left = 100
+margin_top = 15
+margin_right = 15
+margin_bottom = 15
+horizontal_alignment = 0
+vertical_alignment = 0
+autowrap_mode = 3
+custom_minimum_size = Vector2(400, 70)
+
+[node name="ContinueHint" type="Label" parent="DialogueBox/Background"]
+name = "ContinueHint"
+text = "▼ Pressione E para continuar"
+margin_left = 420
+margin_top = 75
+margin_right = 15
+margin_bottom = 10
+visible = false
+horizontal_alignment = 2
+custom_minimum_size = Vector2(150, 20)

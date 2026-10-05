@@ -1,0 +1,22 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid_idle_frames"]
+
+[sub_resource type="AtlasTexture" id="Texture_1"]
+texture = ExtResource("1")
+region = Rect2(0, 0, 16, 16)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = false
+repeat = 0
+
+[sub_resource type="Animation" id="Animation_1"]
+resource_name = "idle"
+resource_local_to_scene = false
+length = 0.4
+loop = true
+
+[sub_resource type="Animation" id="Animation_1/Tracks/Track_1"]
+type = "value"
+path = NodePath("Sprite2D")
+update = 1
+
+[sub_resource type="Animation" id="Animation_1/Tracks/Track_1/Import_1"]
+value = 0.0

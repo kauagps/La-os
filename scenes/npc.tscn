@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=4 uid="uid_npc_scene"]
+
+[ext_resource type="Script" path="res://scripts/npc_interactable.gd" id="npc_script"]
+
+[node name="NPC" type="Area2D"]
+position = Vector2(400, 300)
+group = "Interactable"
+script = ExtResource("npc_script")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+offset = Vector2(0, 4)
+
+[node name="Shape" type="CircleShape2D" parent="CollisionShape2D/Shape"]
+radius = 24.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("npc_sprite")

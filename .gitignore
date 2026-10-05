@@ -1,0 +1,11 @@
+# Godot cache
+.godot/
+export/
+*.exe
+*.zip
+*.app
+user:///
+# Configurações locais
+project.godot.user
+# Temporário
+*.log

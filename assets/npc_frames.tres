@@ -1,0 +1,31 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://bvimyt5e4cn2i"]
+
+[ext_resource type="Texture2D" uid="uid://e8jjoqxsqhhv" path="res://assets/npc/chicra.png" id="1_qc4jg"]
+[ext_resource type="Texture2D" uid="uid://cgajer1lekqh3" path="res://assets/player/chicra-Sheet.png" id="2_mcnwu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mcnwu"]
+atlas = ExtResource("1_qc4jg")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kiyy0"]
+atlas = ExtResource("2_mcnwu")
+region = Rect2(16, 0, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mcnwu")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kiyy0")
+}],
+"loop": 1,
+"name": &"with_pires",
+"speed": 5.0
+}]
